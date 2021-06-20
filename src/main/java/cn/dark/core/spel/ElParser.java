@@ -19,7 +19,7 @@ public class ElParser {
     /**
      * 解析el表达式，动态获取参数的值作为key
      *
-     * @param key el表达式
+     * @param key el表达式，for example: 非对象参数用"#param"；获取对象参数的属性值用“#student.age”
      * @param paramNames 参数名称
      * @param args 参数值
      * @return java.lang.String
