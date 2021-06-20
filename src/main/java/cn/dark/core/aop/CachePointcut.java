@@ -37,6 +37,7 @@ public class CachePointcut implements Pointcut, MethodMatcher {
             return true;
         }
 
+        // 获取原始方法（处理代理方法和桥接方法）
         Method specificMethod = AopUtils.getMostSpecificMethod(method, targetClass);
         if (AnnotatedElementUtils.hasAnnotation(method, EasyCache.class)
                 || AnnotatedElementUtils.hasAnnotation(specificMethod, EasyCache.class)) {
